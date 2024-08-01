@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="es">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <!-- Título -->
+        <title>TÍtulo</title>
+        <meta name="title" content="Titulo">
+        <meta name="description" content="Página web">
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="96x96" href="imagenes/favicon-96x96.png"> 
+        <!-- Hoja de estilo principal -->
+        <link rel="stylesheet" href="estilos/estilo.css" type="text/css">
+
+    </head>
+
+    <body>
+
+        <!-- Cabecera de la página web -->
+        <header>
+
+        </header>
+
+        <!-- Zona de navegación dentro del encabezado -->
+        <nav>
+            <!-- Menú principal -->
+            <div class="lateral" >    
+            </div>
+            <div id="menu_principal">
+                <div>
+                    <!-- Logotipo con enlace a la página de inicio -->
+                    <a href="index.html" tabindex="0"><img rel="icon" class="logo" src="imagenes/logo.png" alt="logo"></a>
+                </div>
+                <div id="menu" >               
+                    <a href="#contenedor_zona_2" accesskey="1" tabindex="0" >HABILIDADES</a>
+                    <a href="#contenedor_zona_3" accesskey="2" tabindex="0" >PROYECTOS</a>
+                </div>
+                <div>
+                    <p>contacto@deproyectosjuanerre.com</p>
+                </div>
+            </div>
+            <!-- Idiomas -->
+            <div class="lateral" >
+                <a href="index.html" tabindex="0"><img rel="icon" class="icono_idiomas" src="imagenes/español.png" alt="español"></a>
+                <a href="english.html" tabindex="0"><img rel="icon" class="icono_idiomas" src="imagenes/english.png" alt="english"></a>        
+            </div>
+        </nav>
+        
+        <!-- Zona de contenido principal -->
+
+            <!-- Subzona 1 -->
+            <section id="contenedor_zona_1">
+                <h2>CONTENEDOR ZONA 1</h2>
+                <div id="lateral_izquierdo">
+                    <p>¡Hola! soy Juan Ruiz, y soy desarrollador front-end.</p>
+                    <!-- link a redes sociales -->
+                     <div id="div_redes">
+                        <div id="linkedin">
+                            <a href="https://www.linkedin.com/in/juan-erre/" tabindex="0"><img rel="icon" id="icono_linkedin" src="imagenes/linkedin.png" alt="linkedin"></a>
+                        </div>
+                        <div id="github">
+                            <a href="https://github.com/juan-erre" tabindex="0"><img rel="icon" id="icono_github" src="imagenes/github.png" alt="github"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="monitor">
+                    <div id="marco" >
+                        <div id="pantalla">
+                            <img rel="icon" id="html" class="html" src="imagenes/html.png"  alt="html" title="html">
+                            <img rel="icon" id="css" class="css" src="imagenes/css.png"  alt="css" title="css">
+                            <img rel="icon" id="javascript" class="javascript" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                            <img rel="img" id="imagen_web" class="imagen_web" src="imagenes/web.jpg"  alt="imagen" title="imagen_web">
+                        </div>
+                    </div>
+                    <div id="base" >
+                        <div>
+                            <!-- Animacion con "animateMotion", haciendo que un elemento siga una determinada ruta -->
+                            <svg viewBox="0 0 100 100" id="svg">
+                                <path  d="M 25, 50a 25,25 0 1,1 50,0a 25,25 0 1,1 -50,0" style="stroke:white; stroke-width:3; fill:none;"></path>
+                                <!-- DibujA el texto -->
+                                <text id="nombre" x=0 y=0>o
+                                    <!-- Crea la animación de tal forma que el texto seguira la ruta path que hemos definido en animateMotion y que es igual a la que hemos pintado anteriormente -->
+                                    <animateMotion id="animacion_1" begin="0s"  path="M 20, 55a 25,25 0 1,1 50,0a 25,25 0 1,1 -50,0"  dur="3s"  repeatCount="indefinite"></animateMotion> 
+                                </text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="lateral_derecho" >
+
+                </div>
+
+            </section>
+
+            <!-- Subzona 2 -->
+            <section id="contenedor_zona_2">
+                <h2>CONTENEDOR ZONA 2</h2>
+                <div>
+                    <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
+                    <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
+                    <img rel="icon" class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                </div>
+                <div>
+                    <img rel="icon" class="icono" src="imagenes/jquery.png"  alt="jquery" title="jquery">
+                    <img rel="icon" class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
+                    <img rel="icon" class="icono" src="imagenes/photoshop.png"  alt="photoshop" title="photoshop">
+                    <img rel="icon" class="icono" src="imagenes/git.png"  alt="imagen" title="git">
+                </div>
+            </section>
+
+            <!-- Subzona 3 -->
+            <section id="contenedor_zona_3">
+                <h2>CONTENEDOR ZONA 3</h2>
+                <a href="https://www.laacequia.deproyectosjuanerre.com/" tabindex="0">https://www.laacequia.deproyectosjuanerre.com/</a>
+                <img rel="img" id="web_laacequia" src="imagenes/web_laacequia.jpg"  alt="acequia">
+            </section>
+
+        <!-- Zona de pie de página -->
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>

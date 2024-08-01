@@ -1,0 +1,524 @@
+/* Importa una fuente online */
+@font-face {
+    font-family:"fuente_online";
+    src: url("https://fonts.gstatic.com/s/opensans/v36/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVI.woff2");
+}
+
+/* Define las variables para los colores */
+:root{
+    --colorA: #ffffff;
+    --colorB: #979797;
+    --colorC: #000000;
+    --colorD: #388488;
+    --colorE: #2B2A29;
+    --colorF: #C5C6C6;
+    --colorG: #EEEEEE;
+}
+
+/* Se incluyen en las dimensiones de los elementos los rellenos y los bordes, pero no los margenes */ 
+* { box-sizing: border-box;}
+
+h2{
+    display: none;
+}
+
+a{
+ color: var(--colorA);
+}
+
+p{
+    font-family: "fuente_online";
+    font-size: 16px;
+}
+
+.logo{
+    width: 50%;
+    margin: 1%;
+}
+
+.icono_nav{
+    width: 15%;
+}
+
+body{
+     /* Define el contenedor principal como un grid */ 
+     display: grid;
+     /* Define el número de filas y columnas que conforman nuestra maqueta*/
+     grid-template-columns: 100%;
+     grid-template-rows: 30px 100px 700px 800px 600px 30px;
+     /* Define mediante areas nuestra maqueta*/
+     grid-template-areas:
+        "header"
+        "nav"
+        "zona_1"
+        "zona_2"
+        "zona_3"
+        "footer"; 
+    background-color: var(--colorG);
+}
+
+/* Área de Cabecera */   
+header{
+    grid-area:header;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Área de navegación*/
+nav{
+    grid-area:nav;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu_principal{
+    box-shadow: -5px -5px 20px -5px var(--colorB), 5px 5px 20px -5px var(--colorB);
+    background-color: var(--colorD);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 70%;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#menu_principal a {
+/*    border: 1px solid red;    */ 
+    font-family: "fuente_online", serif;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px;
+ }
+
+#menu_principal a:hover {
+    color: var(--colorF);
+}
+
+#menu_principal p {
+    color: var(--colorA);
+}
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: center;
+    width: 9%;
+}
+
+.icono_idiomas{
+    width: 1.6vw;
+    margin: 0.3vw;
+}
+
+/* Subzona de contenido */
+#contenedor_zona_1{
+    grid-area:zona_1;
+    background: url("../imagenes/fondo_1.png") top center/100% 100% no-repeat;;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#lateral_izquierdo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 90%;
+}
+
+#lateral_izquierdo p{
+    width: 75%;
+    font-size: 25px;
+}
+
+#div_redes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 75%;
+    height: 20%;
+}
+
+/* Iconos de redes sociales con transicion */    
+#icono_linkedin {
+    border: var(--colorA) 0.5vw solid;
+    border-radius: 50%;
+    width: 5vw;
+}
+        
+#icono_linkedin:hover {
+    transform: rotate(360deg);
+    border-color: var(--colorD);
+    /* La transición se aplica sobre todas las propiedad definidas y durará 2 segundo.*/
+    transition: all, 2s;
+}
+ 
+#icono_github {
+    border: var(--colorA) 0.5vw solid;
+    border-radius: 50%;
+    width: 5vw;
+}
+         
+#icono_github:hover {
+    transform: rotate(360deg);
+    border-color: var(--colorD);
+    /* La transición se aplica sobre todas las propiedad definidas y durará 2 segundo.*/
+    transition: all, 2s;
+}
+
+#lateral_derecho{
+    width: 25%;
+    height: 90%;
+}
+
+/* Contenedor principal de las animaciones */
+#monitor{
+    background: url("../imagenes/monitor.png") top center/100% 100% no-repeat;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 90%;
+}
+
+#marco {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 67.5%;
+}
+
+#pantalla {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 90%;
+}
+
+#base{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 32.5%;
+}
+
+/* Elementos que seran animados */
+.html {
+    width: 6vw;
+    position:relative;    
+    left: 80%;
+    bottom: 60%;
+    opacity:0;
+}
+
+.css {
+    width: 6vw;
+    position:relative;   
+    left: 35%; 
+    bottom: 60%;
+    opacity:0;
+}
+
+.javascript {
+    width: 6vw;
+    position:relative;   
+    left: -80%; 
+    bottom: 60%;
+    opacity:0;
+}
+
+.imagen_web {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+}
+
+/* Define las caracteristicas de cada animación */
+#html {
+    animation-name: html;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#css {
+    animation-name: css;
+    animation-duration: 7s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#javascript {
+    animation-name: javascript;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+#imagen_web {
+    animation-name: aparece_web;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+/* Define los estados de cada animación*/
+@keyframes html {
+    0%   {
+        }
+    45% {
+        bottom: 0%;
+        left: -5%;
+        opacity:1;
+    }
+    70%{
+        bottom: 0%;
+        left: -5%;
+        opacity: 0;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes css {
+    0%   {
+        }
+    70% {
+        bottom: 0%;
+        left: 0%;
+        opacity:1;
+    }
+    80% {
+        bottom: 0%;
+        left: 0%;
+        opacity:0;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes javascript {
+    0%   {
+        }
+    50% {
+        bottom: 0%;
+        left: 5%;
+        opacity:1;
+    }
+    70% {
+        bottom: 0%;
+        left: 5%;
+        opacity:0;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes aparece_web {
+    from   {
+        }
+    to {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+#svg{
+    width: 4vw;
+    height: 4vw;
+}
+
+/* Subzona de contenido */
+#contenedor_zona_2{
+    grid-area:zona_2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icono {
+    margin: 2vw;
+    width: 9vw;
+}
+
+/* Subzona de contenido */
+#contenedor_zona_3{
+    grid-area:zona_3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorA);
+}
+
+#contenedor_zona_3 a{
+    color: var(--colorC);
+    font-size: 18px;
+    margin: 1%;
+}
+
+#web_laacequia {
+    box-shadow: -5px -5px 20px -5px var(--colorB), 5px 5px 20px -5px var(--colorB);
+    border: solid 3px var(--colorD);
+    height: 70%;
+}
+
+/* Pie de página */
+footer{
+    grid-area:footer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Adaptación a la resolución de la pantalla  */ 
+@media screen and (max-width:1200px) {
+   
+    body{
+        grid-template-rows: 10px 80px 500px 400px 300px 10px;
+       }    
+}
+
+@media screen and (max-width:992px) {
+   
+    body{
+        grid-template-rows: 10px 70px 400px 300px 300px 10px;   
+    }
+}
+
+@media screen and (max-width:768px) {
+   
+    body{
+        grid-template-rows: 5px 65px 600px 300px 300px 5px;
+       } 
+    #menu {
+        display:none;
+    }
+    .icono_idiomas {
+        width: 30%;
+    }
+    .logo {
+        width: 30%;
+    }
+    #contenedor_zona_1{
+        flex-direction: column;
+    }
+    
+    #lateral_izquierdo {
+        width: 100%;
+        height: 20%;
+    }
+    #lateral_izquierdo p{
+        text-align: center;
+        width: 100%;
+        font-size: 17px;
+    }
+    #div_redes {
+        width: 50%;
+        height: 40%;
+    }
+    #monitor{
+        width: 80%;
+        height: 80%;
+    }
+    #lateral_derecho {
+        display: none;
+    }
+}
+
+@media screen and (max-width:576px) {
+   
+    body{
+        grid-template-rows: 5px 80px 500px 200px 300px 5px;
+       }   
+    .icono_idiomas {
+        width: 40%;
+    }
+    .logo {
+        width: 45%;
+    }
+    #icono_linkedin,  #icono_github {
+        width: 7vw;
+    }
+    #web_laacequia {
+        height: 60%;
+    }
+}
+
+@media screen and (max-width:420px) {
+   
+    body{
+        grid-template-rows: 5px 80px 400px 200px 200px 5px;
+       }
+    #menu_principal p {
+        font-size: 12px;
+    }
+    .icono_idiomas {
+        width: 50%;
+    }
+    .logo {
+        width: 60%;
+    }
+    #lateral_izquierdo p{
+        font-size: 13px;
+    }
+    #contenedor_zona_3 a{
+        font-size: 14px;
+    }
+    #web_laacequia {
+        height: 60%;
+    }
+}
