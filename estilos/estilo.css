@@ -9,7 +9,7 @@
     --colorA: #ffffff;
     --colorB: #979797;
     --colorC: #000000;
-    --colorD: #388488;
+    --colorD: #207175;
     --colorE: #2B2A29;
     --colorF: #C5C6C6;
     --colorG: #EEEEEE;
@@ -113,6 +113,7 @@ nav{
 
 #menu_principal p {
     color: var(--colorA);
+    margin-right: 3px;
 }
 
 .lateral {
@@ -377,7 +378,7 @@ nav{
 }
 
 /* Subzona de contenido */
-#contenedor_zona_2{
+#habilidades {
     grid-area:zona_2;
     display: flex;
     flex-direction: column;
@@ -392,7 +393,7 @@ nav{
 }
 
 /* Subzona de contenido */
-#contenedor_zona_3{
+#proyectos{
     grid-area:zona_3;
     display: flex;
     flex-direction: row;
@@ -402,7 +403,7 @@ nav{
     background-color: var(--colorA);
 }
 
-#contenedor_zona_3 div {
+#proyectos div {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -410,13 +411,13 @@ nav{
     justify-content: center;
 }
 
-#contenedor_zona_3 a{
+#proyectos a{
     color: var(--colorC);
     font-size: 18px;
     margin: 1%;
 }
 
-#contenedor_zona_3 img {
+#proyectos img {
     box-shadow: -5px -5px 20px -5px var(--colorB), 5px 5px 20px -5px var(--colorB);
     border: solid 3px var(--colorD);
     width: 85%;
@@ -485,7 +486,7 @@ footer{
     #lateral_derecho {
         display: none;
     }
-    #contenedor_zona_3{
+    #proyectos{
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
@@ -526,7 +527,7 @@ footer{
     #lateral_izquierdo p{
         font-size: 13px;
     }
-    #contenedor_zona_3 a{
+    #proyectos a{
         font-size: 14px;
     }
 }
