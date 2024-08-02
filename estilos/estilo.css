@@ -395,11 +395,19 @@ nav{
 #contenedor_zona_3{
     grid-area:zona_3;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--colorA);
+}
+
+#contenedor_zona_3 div {
+    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    background-color: var(--colorA);
 }
 
 #contenedor_zona_3 a{
@@ -408,10 +416,10 @@ nav{
     margin: 1%;
 }
 
-#web_laacequia {
+#contenedor_zona_3 img {
     box-shadow: -5px -5px 20px -5px var(--colorB), 5px 5px 20px -5px var(--colorB);
     border: solid 3px var(--colorD);
-    height: 70%;
+    width: 85%;
 }
 
 /* Pie de página */
@@ -442,7 +450,7 @@ footer{
 @media screen and (max-width:768px) {
    
     body{
-        grid-template-rows: 5px 65px 600px 300px 300px 5px;
+        grid-template-rows: 5px 65px 600px 300px 700px 5px;
        } 
     #menu {
         display:none;
@@ -477,12 +485,18 @@ footer{
     #lateral_derecho {
         display: none;
     }
+    #contenedor_zona_3{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
 
 @media screen and (max-width:576px) {
    
     body{
-        grid-template-rows: 5px 80px 500px 200px 300px 5px;
+        grid-template-rows: 5px 80px 500px 200px 600px 5px;
        }   
     .icono_idiomas {
         width: 40%;
@@ -493,15 +507,12 @@ footer{
     #icono_linkedin,  #icono_github {
         width: 7vw;
     }
-    #web_laacequia {
-        height: 60%;
-    }
 }
 
 @media screen and (max-width:420px) {
    
     body{
-        grid-template-rows: 5px 80px 400px 200px 200px 5px;
+        grid-template-rows: 5px 80px 400px 200px 500px 5px;
        }
     #menu_principal p {
         font-size: 12px;
@@ -517,8 +528,5 @@ footer{
     }
     #contenedor_zona_3 a{
         font-size: 14px;
-    }
-    #web_laacequia {
-        height: 60%;
     }
 }
