@@ -45,7 +45,7 @@ body{
      display: grid;
      /* Define el número de filas y columnas que conforman nuestra maqueta*/
      grid-template-columns: 100%;
-     grid-template-rows: 30px 100px 700px 800px 600px 30px;
+     grid-template-rows: 30px 100px 700px 800px 600px 600px;
      /* Define mediante areas nuestra maqueta*/
      grid-template-areas:
         "header"
@@ -393,6 +393,9 @@ nav{
 }
 
 /* Subzona de contenido */
+#resultados {
+    text-align: center;
+}
 #proyectos{
     grid-area:zona_3;
     display: flex;
@@ -431,27 +434,51 @@ footer{
     flex-wrap:nowrap;
     align-items: center;
     justify-content: space-evenly;
+    text-align: center;
+}
+
+#solucion {
+    width: 23vw;
+}
+
+#juego {
+    grid-area:footer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imagen_pequeña{
+    border: black solid 2px;
+    width: 4vw;
+}
+
+.imagen_grande{
+    border: black solid 2px;
+    width: 7vw;
 }
 
 /* Adaptación a la resolución de la pantalla  */ 
 @media screen and (max-width:1200px) {
    
     body{
-        grid-template-rows: 10px 80px 500px 400px 300px 10px;
+        grid-template-rows: 10px 80px 500px 400px 300px 350px;
        }    
 }
 
 @media screen and (max-width:992px) {
    
     body{
-        grid-template-rows: 10px 70px 400px 300px 300px 10px;   
+        grid-template-rows: 10px 70px 400px 300px 300px 300px;   
     }
 }
 
 @media screen and (max-width:768px) {
    
     body{
-        grid-template-rows: 5px 65px 600px 300px 700px 5px;
+        grid-template-rows: 5px 65px 600px 300px 700px 800px;
        } 
     #menu {
         display:none;
@@ -492,12 +519,26 @@ footer{
         align-items: center;
         justify-content: space-evenly;
     }
+    footer{
+        flex-direction: column;
+    }
+    #solucion {
+        width: 40vw;
+    }
+       
+    .imagen_pequeña{
+        width: 8vw;
+    }
+    
+    .imagen_grande{
+        width: 12vw;
+    }
 }
 
 @media screen and (max-width:576px) {
    
     body{
-        grid-template-rows: 5px 80px 500px 200px 600px 5px;
+        grid-template-rows: 5px 80px 500px 200px 600px 700px;
        }   
     .icono_idiomas {
         width: 40%;
@@ -513,7 +554,7 @@ footer{
 @media screen and (max-width:420px) {
    
     body{
-        grid-template-rows: 5px 80px 400px 200px 500px 5px;
+        grid-template-rows: 5px 80px 400px 200px 500px 600px;
        }
     #menu_principal p {
         font-size: 12px;

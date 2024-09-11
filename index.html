@@ -14,11 +14,13 @@
         <link rel="icon" type="image/png" sizes="96x96" href="imagenes/favicon-96x96.png"> 
         <!-- Hoja de estilo principal -->
         <link rel="stylesheet" href="estilos/estilo.css" type="text/css">
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 
     </head>
 
     <body>
-
+        
         <!-- Cabecera de la página web -->
         <header>
 
@@ -98,6 +100,7 @@
             <!-- Subzona 2 -->
             <section id="habilidades">
                 <h2>CONTENEDOR ZONA 2</h2>
+                <div><p id="resultados"></p></div>
                 <div>
                     <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
                     <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
@@ -126,9 +129,41 @@
 
         <!-- Zona de pie de página -->
         <footer>
-
+            <!-- Para seleccionar una imagen y colocarla en otro lugar -->
+            <div>
+                <h3> Completa el rompecabezas para </h3>
+                <h3> obtener una imagen como esta: </h3>
+                <img id="solucion" src="imagenes/solucion.png" alt="imagen" tabindex="0"> 
+            </div>
+            <div id="juego">
+                <div>
+                    <img id="img_pequeña1" class="imagen_pequeña" src="imagenes/negro.png" alt="imagen" tabindex="0">  
+                    <img id="img_pequeña2" class="imagen_pequeña" src="imagenes/medioB.png" alt="imagen" tabindex="0"> 
+                    <img id="img_pequeña2" class="imagen_pequeña" src="imagenes/medioA.png" alt="imagen" tabindex="0"> 
+                    <img id="img_pequeña3" class="imagen_pequeña" src="imagenes/blanco.png" alt="imagen" tabindex="0">
+                </div>
+                <div>
+                    <div>
+                        <img id="img_grande1" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                        <img id="img_grande2" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                        <img id="img_grande3" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                    </div>
+                    <div>
+                        <img id="img_grande4" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                        <img id="img_grande5" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                        <img id="img_grande6" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                    </div>
+                    <div>
+                        <img id="img_grande7" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                        <img id="img_grande8" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                        <img id="img_grande9" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
+                    </div>
+                </div>
+            </div>
         </footer>
 
+        <!-- Script -->
+        <script src="script/script.js"></script>
     </body>
 
 </html>
