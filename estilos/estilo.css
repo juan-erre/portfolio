@@ -45,7 +45,7 @@ body{
      display: grid;
      /* Define el número de filas y columnas que conforman nuestra maqueta*/
      grid-template-columns: 100%;
-     grid-template-rows: 30px 100px 700px 800px 600px 600px;
+     grid-template-rows: 30px 100px 700px 800px 1600px 600px;
      /* Define mediante areas nuestra maqueta*/
      grid-template-areas:
         "header"
@@ -132,7 +132,7 @@ nav{
 /* Subzona de contenido */
 #contenedor_zona_1{
     grid-area:zona_1;
-    background: url("../imagenes/fondo_1.png") top center/100% 100% no-repeat;;
+    background: url("../imagenes/fondo_1.png") top center/100% 100% no-repeat;
     display: flex;
     flex-direction: row;
     flex-wrap:nowrap;
@@ -399,7 +399,7 @@ nav{
 #proyectos{
     grid-area:zona_3;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
@@ -412,6 +412,7 @@ nav{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    max-width: 60%;
 }
 
 #proyectos a{
@@ -464,14 +465,14 @@ footer{
 @media screen and (max-width:1200px) {
    
     body{
-        grid-template-rows: 10px 80px 500px 400px 300px 350px;
+        grid-template-rows: 10px 80px 500px 400px 1000px 350px;
        }    
 }
 
 @media screen and (max-width:992px) {
    
     body{
-        grid-template-rows: 10px 70px 400px 300px 300px 300px;   
+        grid-template-rows: 10px 70px 400px 300px 800px 300px;   
     }
 }
 
@@ -512,12 +513,6 @@ footer{
     }
     #lateral_derecho {
         display: none;
-    }
-    #proyectos{
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-evenly;
     }
     footer{
         flex-direction: column;
