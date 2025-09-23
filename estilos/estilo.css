@@ -45,7 +45,7 @@ body{
      display: grid;
      /* Define el número de filas y columnas que conforman nuestra maqueta*/
      grid-template-columns: 100%;
-     grid-template-rows: 30px 100px 700px 800px 1600px 600px;
+     grid-template-rows: 30px 100px 700px 800px 1800px 700px;
      /* Define mediante areas nuestra maqueta*/
      grid-template-areas:
         "header"
@@ -55,6 +55,8 @@ body{
         "zona_3"
         "footer"; 
     background-color: var(--colorG);
+    max-width: 1800px;
+
 }
 
 /* Área de Cabecera */   
@@ -65,6 +67,10 @@ header{
     flex-wrap:nowrap;
     align-items: center;
     justify-content: left;
+}
+
+header p{
+    font-size: 1vw;
 }
 
 /* Área de navegación*/
@@ -408,23 +414,34 @@ nav{
 
 #proyectos div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-around;
+    width: 85%;
+    margin:1vw;
+}
+
+#proyectos div article{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
     justify-content: center;
-    max-width: 60%;
+    width: 50%;
+    margin: 2%;
 }
 
 #proyectos a{
     color: var(--colorC);
     font-size: 18px;
-    margin: 1%;
 }
 
 #proyectos img {
     box-shadow: -5px -5px 20px -5px var(--colorB), 5px 5px 20px -5px var(--colorB);
     border: solid 3px var(--colorD);
-    width: 85%;
+    width: 90%;
+    margin: 1%;
 }
 
 /* Pie de página */
@@ -439,7 +456,7 @@ footer{
 }
 
 #solucion {
-    width: 23vw;
+    width: 30vw;
 }
 
 #juego {
@@ -465,21 +482,22 @@ footer{
 @media screen and (max-width:1200px) {
    
     body{
-        grid-template-rows: 10px 80px 500px 400px 1000px 350px;
-       }    
+        grid-template-rows: 10px 80px 500px 600px 1100px 400px;
+    }
+        
 }
 
 @media screen and (max-width:992px) {
    
     body{
-        grid-template-rows: 10px 70px 400px 300px 800px 300px;   
+        grid-template-rows: 10px 70px 400px 500px 800px 350px;   
     }
 }
 
 @media screen and (max-width:768px) {
    
     body{
-        grid-template-rows: 5px 65px 600px 300px 700px 800px;
+        grid-template-rows: 5px 65px 600px 400px 700px 800px;
        } 
     #menu {
         display:none;
@@ -489,6 +507,9 @@ footer{
     }
     .logo {
         width: 30%;
+    }
+    header p{
+        font-size: 1.5vw;
     }
     #contenedor_zona_1{
         flex-direction: column;
@@ -533,7 +554,7 @@ footer{
 @media screen and (max-width:576px) {
    
     body{
-        grid-template-rows: 5px 80px 500px 200px 600px 700px;
+        grid-template-rows: 5px 80px 500px 300px 600px 700px;
        }   
     .icono_idiomas {
         width: 40%;
@@ -549,7 +570,7 @@ footer{
 @media screen and (max-width:420px) {
    
     body{
-        grid-template-rows: 5px 80px 400px 200px 500px 600px;
+        grid-template-rows: 5px 80px 400px 275px 500px 600px;
        }
     #menu_principal p {
         font-size: 12px;
