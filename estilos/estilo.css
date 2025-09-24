@@ -56,6 +56,7 @@ body{
         "footer"; 
     background-color: var(--colorG);
     max-width: 1800px;
+    margin: 0 auto;
 
 }
 
@@ -587,4 +588,5 @@ footer{
     #proyectos a{
         font-size: 14px;
     }
+
 }
