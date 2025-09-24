@@ -546,7 +546,7 @@ footer{
         width: 80%;
     }
     #proyectos div article{
-        width: 90%;
+        width: 85%;
     }
     footer{
         flex-direction: column;
@@ -615,4 +615,5 @@ footer{
     #proyectos div article a{
         font-size: 3.7vw;
     }
+
 }
