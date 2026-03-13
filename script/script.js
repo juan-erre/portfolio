@@ -1,24 +1,3 @@
-// CARGA UNA FRASE MOTIVACIONAL CADA VEZ QUE SE RECARGA LA PÁGINA
-let peticion;
-
-function iniciar () {
-				peticion = new XMLHttpRequest();
-				peticion.open('GET', "https://api.kanye.rest", true); 
-				peticion.send();
-				peticion.addEventListener("load", cargada);
-}
-
-function cargada () {
-				let resultados = '';
-				let cds = JSON.parse(peticion.responseText);
-				resultados = `<p><b>Frase del momento:</b> ${cds.quote}</p>`;
-				document.getElementById("resultados").innerHTML = resultados;
-}
-
-window.addEventListener("load", iniciar, false);
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 // ROMPECABEZAS CREADO CON JQUERY
 
 // Instruccion para seleccionar una imagen en miniatura (al hacer click sobre ella, con multitud de posibilidades) y colocarla en la zona de imagen grande seleccionada (al hacer click sobre ella, con multitud de posibilidades) 
@@ -31,3 +10,6 @@ $("body").on("click", ".imagen_pequeña", function(){
     	});
 	});
 });
+
+// Actualiza el año del footer
+document.getElementById("year").textContent = new Date().getFullYear();

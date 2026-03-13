@@ -23,7 +23,7 @@
 
         <!-- Cabecera de la página web -->
         <header>
-            <p>WEB DEVELOPED WITH HTML, CSS AND JAVASCRIPT</p>
+            <h3>WEB DEVELOPED WITH HTML5, CSS3 AND JAVASCRIPT</h3>
         </header>
 
         <!-- Zona de navegación dentro del encabezado -->
@@ -40,9 +40,6 @@
                     <a href="#habilidades" accesskey="1" tabindex="0" >SKILLS</a>
                     <a href="#proyectos" accesskey="2" tabindex="0" >PROJECTS</a>
                 </div>
-                <div>
-                    <p>contacto@desarrollosjuanerre.com</p>
-                </div>
             </div>
             <!-- Idiomas -->
             <div class="lateral" >
@@ -57,14 +54,18 @@
             <section id="contenedor_zona_1">
                 <h2>CONTENEDOR ZONA 1</h2>
                 <div id="lateral_izquierdo">
-                    <p>Hi! I'm Juan Ruiz, and I'm a full stack developer.</p>
+                    <p>Hi! I'm Juan Ruiz, and I'm a full stack web developer.</p>
                     <!-- link a redes sociales -->
                     <div id="div_redes">
                         <div id="linkedin">
-                            <a href="https://www.linkedin.com/in/juan-erre/" tabindex="0"><img rel="icon" id="icono_linkedin" src="imagenes/linkedin.png" alt="linkedin"></a>
+                          <a href="https://www.linkedin.com/in/juan-erre/" target="_blank" rel="noopener noreferrer" tabindex="0">
+                            <img id="icono_linkedin" src="imagenes/linkedin.png" alt="linkedin">
+                        </a>
                         </div>
                         <div id="github">
-                            <a href="https://github.com/juan-erre" tabindex="0"><img rel="icon" id="icono_github" src="imagenes/github.png" alt="github"></a>
+                            <a href="https://github.com/juan-erre" target="_blank" rel="noopener noreferrer" tabindex="0">
+                                <img id="icono_github" src="imagenes/github.png" alt="github">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -72,9 +73,10 @@
                     <div id="marco" >
                         <div id="pantalla">
                             <img rel="icon" id="html" class="html" src="imagenes/html.png"  alt="imagen" title="html">
+                            <img rel="icon" id="laravel" class="laravel" src="imagenes/laravel.png"  alt="laravel" title="laravel">
                             <img rel="icon" id="css" class="css" src="imagenes/css.png"  alt="imagen" title="css">
                             <img rel="icon" id="javascript" class="javascript" src="imagenes/javascript.png"  alt="javascript" title="javascript">
-                            <img rel="img" id="imagen_web" class="imagen_web" src="imagenes/web.jpg"  alt="imagen" title="imagen_web">
+                            <img rel="img" id="imagen_web" class="imagen_web" src="imagenes/logo.png"  alt="imagen" title="imagen_web">
                         </div>
                     </div>
                     <div id="base" >
@@ -83,7 +85,7 @@
                             <svg viewBox="0 0 100 100" id="svg">
                                 <path  d="M 25, 50a 25,25 0 1,1 50,0a 25,25 0 1,1 -50,0" style="stroke:white; stroke-width:3; fill:none;"></path>
                                 <!-- DibujA el texto -->
-                                <text id="nombre" x=0 y=0>o
+                                <text id="nombre" x=0 y=0>◉
                                     <!-- Crea la animación de tal forma que el texto seguira la ruta path que hemos definido en animateMotion y que es igual a la que hemos pintado anteriormente -->
                                     <animateMotion id="animacion_1" begin="0s"  path="M 20, 55a 25,25 0 1,1 50,0a 25,25 0 1,1 -50,0"  dur="3s"  repeatCount="indefinite"></animateMotion> 
                                 </text>
@@ -100,86 +102,84 @@
             <!-- Subzona 2 -->
             <section id="habilidades">
                 <h2>CONTENEDOR ZONA 2</h2>
-                <div>
-                    <img rel="icon" class="icono" src="imagenes/php.png"  alt="php" title="php">
-                    <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
-                </div>
-                <div>
-                    <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
-                    <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
-                    <img rel="icon" class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
-                    <img rel="icon" class="icono" src="imagenes/react.png"  alt="react" title="react">
-                </div>
-                <div>
-                    <img rel="icon" class="icono" src="imagenes/jquery.png"  alt="jquery" title="jquery">
-                    <img rel="icon" class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
-                    <img rel="icon" class="icono" src="imagenes/photoshop.png"  alt="photoshop" title="photoshop">
-                    <img rel="icon" class="icono" src="imagenes/git.png"  alt="imagen" title="git">
+                <h3>SKILLS<h3>
+                <div id="habilidades_iconos">
+                    <div>
+                        <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                        <img rel="icon" class="icono" src="imagenes/php.png"  alt="php" title="php">
+                        <img rel="icon" class="icono" src="imagenes/mysql.png"  alt="mysql" title="mysql">
+                    </div>
+                    <div>
+                        <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
+                        <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
+                        <img rel="icon" class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                        <img rel="icon" class="icono" src="imagenes/bootstrap.png" alt="bootstrap" title="bootstrap">
+                        <img rel="icon" class="icono" src="imagenes/jquery.png"  alt="jquery" title="jquery">
+                    </div>
+                    <div>
+                        <img rel="icon" class="icono" src="imagenes/git.png"  alt="imagen" title="git">
+                        <img rel="icon" class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
+                        <img rel="icon" class="icono" src="imagenes/photoshop.png"  alt="photoshop" title="photoshop">
+                    </div>
                 </div>
             </section>
 
             <!-- Subzona 3 -->
             <section id="proyectos">
                 <h2>CONTENEDOR ZONA 3</h2>
-                <div>
+                <h3>PROJECTS</h3>
+
+                <div class="div_proyectos">
                     <article>
-                        <a href="https://eventos.desarrollosjuanerre.com/" tabindex="0">https://www.eventos.desarrollosjuanerre.com</a>
-                        <p>Project developed with LARAVEL for event management.</p>
+                        <a href="https://mileventos.desarrollosjuanerre.com/" tabindex="0">https://www.mileventos.desarrollosjuanerre.com</a>
+                        <p>Project developed with LARAVEL for event management and ticket booking.</p>
+                        <h5>TECHNOLOGIES</h5>
+                        <div class="div_tecnologias">
+                            <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                            <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
+                            <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
+                            <img rel="icon" class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                        </div>
                     </article>
-                    <a href="https://eventos.desarrollosjuanerre.com/" tabindex="0"><img rel="img" id="eventos" src="imagenes/eventos.jpg"  alt="eventos"></a>
+                    <a class="link_proyecto" href="https://mileventos.desarrollosjuanerre.com/" tabindex="0"><img class="proyectos_img" rel="img" id="mileventos" src="imagenes/mileventos.png"  alt="mileventos"></a>
                 </div>
-                <div>
+
+                <div class="div_proyectos">
                     <article>
-                        <a href="https://notas.desarrollosjuanerre.com" tabindex="0">https://notas.desarrollosjuanerre.com</a>
-                        <p>Simple project (front-end only), developed with REACT.</p>
+                        <a href="https://cordobita.es/" tabindex="0">https://www.cordobita.es</a>
+                        <p>Project developed with LARAVEL and currently active, to offer information related to leisure activities in the city of Cordoba.</p>
+                        <h5>TECHNOLOGIES</h5>
+                        <div class="div_tecnologias">
+                            <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                            <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
+                            <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
+                        </div>
                     </article>
-                    <a href="https://notas.desarrollosjuanerre.com" tabindex="0"><img rel="img" id="web_notas" src="imagenes/notas.jpg"  alt="notas"></a>
+                    <a class="link_proyecto" href="https://cordobita.es/" tabindex="0"><img class="proyectos_img" rel="img" id="cordobita" src="imagenes/cordobita.png"  alt="cordobita"></a>
                 </div>
-                <div>
+
+                <div class="div_proyectos">
                     <article>
                         <a href="https://montaya.desarrollosjuanerre.com" tabindex="0">https://montaya.desarrollosjuanerre.com</a>
-                        <p>Project developed with WORDPRESS.</p>
+                        <p>Project developed with WORDPRESS, to offer information related to adventure activities.</p>
+                        <h5>TECHNOLOGIES</h5>
+                        <div class="div_tecnologias">
+                        <img rel="icon" class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
+                        </div>
                     </article>
-                    <a href="https://montaya.desarrollosjuanerre.com" tabindex="0"><img rel="img" id="web_montaya" src="imagenes/montaya.jpg"  alt="montaya"></a>
+                    <a class="link_proyecto" href="https://montaya.desarrollosjuanerre.com" tabindex="0"><img class="proyectos_img" rel="img" id="web_montaya" src="imagenes/montaya.jpg"  alt="montaya"></a>
                 </div>
+
             </section>
 
         <!-- Zona de pie de página -->
         <footer>
-            <!-- Para seleccionar una imagen y colocarla en otro lugar -->
+          
             <div>
-                <img id="solucion" src="imagenes/solucion.png" alt="imagen" tabindex="0"> 
+                <p><strong>contacto@desarrollosjuanerre.com</strong></p>
+                <p>© Copyright desarrollosjuanerre.com <span id="year"></span></p>
             </div>
-            <div id="juego">
-                <div>
-                    <h3> Complete the puzzle:</h3>
-                    <h3> (Select and click where appropriate)</h3>
-                </div>
-                <div>
-                    <img id="img_pequeña1" class="imagen_pequeña" src="imagenes/negro.png" alt="imagen" tabindex="0">  
-                    <img id="img_pequeña2" class="imagen_pequeña" src="imagenes/medioB.png" alt="imagen" tabindex="0"> 
-                    <img id="img_pequeña2" class="imagen_pequeña" src="imagenes/medioA.png" alt="imagen" tabindex="0"> 
-                    <img id="img_pequeña3" class="imagen_pequeña" src="imagenes/blanco.png" alt="imagen" tabindex="0">
-                </div>
-                <div>
-                    <div>
-                        <img id="img_grande1" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                        <img id="img_grande2" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                        <img id="img_grande3" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                    </div>
-                    <div>
-                        <img id="img_grande4" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                        <img id="img_grande5" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                        <img id="img_grande6" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                    </div>
-                    <div>
-                        <img id="img_grande7" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                        <img id="img_grande8" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                        <img id="img_grande9" class="imagen_grande" src="imagenes/blanco.png" alt="imagen">  
-                    </div>
-                </div>
-            </div>
-            <div><p id="resultados"></p></div>
+
         </footer>
         
         <!-- Script -->
