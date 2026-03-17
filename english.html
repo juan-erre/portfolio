@@ -5,17 +5,17 @@
         
         <meta charset="UTF-8">
         <!-- Título -->
-        <title>TÍtulo</title>
-        <meta name="title" content="Titulo">
-        <meta name="description" content="Página web">
+        <title>Portfolio</title>
+        <meta name="description" content="Portfolio of Juan Ruiz, full stack web developer specializing in Laravel.">
+        <meta name="keywords" content="Portfolio, Juan Ruiz, Laravel, PHP, Full Stack, JavaScript, HTML, CSS">
+        <meta name="robots" content="index, follow">
         <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
         <!-- Favicon -->
         <link rel="icon" type="image/png" sizes="96x96" href="imagenes/favicon-96x96.png"> 
+        <link rel="apple-touch-icon" sizes="180x180" href="imagenes/favicon-apple-touch-icon.png">
         <!-- Hoja de estilo principal -->
         <link rel="stylesheet" href="estilos/estilo.css" type="text/css">
-        <!-- Jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
         
     </head>
 
@@ -27,44 +27,47 @@
         </header>
 
         <!-- Zona de navegación dentro del encabezado -->
-        <nav>
+        <nav aria-label="Main navigation">
             <!-- Menú principal -->
-            <div class="lateral" >    
+            <div class="div_navegacion">    
             </div>
             <div id="menu_principal">
                 <div>
                     <!-- Logotipo con enlace a la página de inicio -->
-                    <a href="index.html" tabindex="0"><img rel="icon" class="logo" src="imagenes/logo.png" alt="logo"></a>
+                    <a href="index.html"><img id="logo" src="imagenes/logo.png" alt="company logo"></a>
                 </div>
                 <div id="menu" >               
-                    <a href="#habilidades" accesskey="1" tabindex="0" >SKILLS</a>
-                    <a href="#proyectos" accesskey="2" tabindex="0" >PROJECTS</a>
+                    <a href="#habilidades">SKILLS</a>
+                    <a href="#proyectos">PROJECTS</a>
                 </div>
             </div>
             <!-- Idiomas -->
-            <div class="lateral" >
-                <a href="index.html" tabindex="0"><img rel="icon" class="icono_idiomas" src="imagenes/español.png" alt="español"></a>
-                <a href="english.html" tabindex="0"><img rel="icon" class="icono_idiomas" src="imagenes/english.png" alt="english"></a>        
+            <div class="div_navegacion"> 
+                <a href="index.html"><img class="icono_idiomas" src="imagenes/español.png" alt="español"></a>
+                <a href="english.html"><img class="icono_idiomas" src="imagenes/english.png" alt="english"></a>        
             </div>
         </nav>
         
         <!-- Zona de contenido principal -->
+        <main>
 
+            <h1 class="sr-only">PORTFOLIO</h1>   
+        
             <!-- Subzona 1 -->
-            <section id="contenedor_zona_1">
-                <h2>CONTENEDOR ZONA 1</h2>
+            <section id="datos_personales">
+                <h2 class="sr-only">PERSONAL DATA</h2>
                 <div id="lateral_izquierdo">
                     <p>Hi! I'm Juan Ruiz, and I'm a full stack web developer.</p>
                     <!-- link a redes sociales -->
                     <div id="div_redes">
                         <div id="linkedin">
-                          <a href="https://www.linkedin.com/in/juan-erre/" target="_blank" rel="noopener noreferrer" tabindex="0">
-                            <img id="icono_linkedin" src="imagenes/linkedin.png" alt="linkedin">
+                          <a href="https://www.linkedin.com/in/juan-erre/" target="_blank" rel="noopener noreferrer">
+                            <img class="icono_redes" src="imagenes/linkedin.png" alt="linkedin profile">
                         </a>
                         </div>
                         <div id="github">
-                            <a href="https://github.com/juan-erre" target="_blank" rel="noopener noreferrer" tabindex="0">
-                                <img id="icono_github" src="imagenes/github.png" alt="github">
+                            <a href="https://github.com/juan-erre" target="_blank" rel="noopener noreferrer">
+                                <img class="icono_redes" src="imagenes/github.png" alt="github profile">
                             </a>
                         </div>
                     </div>
@@ -72,17 +75,17 @@
                 <div id="monitor">
                     <div id="marco" >
                         <div id="pantalla">
-                            <img rel="icon" id="html" class="html" src="imagenes/html.png"  alt="imagen" title="html">
-                            <img rel="icon" id="laravel" class="laravel" src="imagenes/laravel.png"  alt="laravel" title="laravel">
-                            <img rel="icon" id="css" class="css" src="imagenes/css.png"  alt="imagen" title="css">
-                            <img rel="icon" id="javascript" class="javascript" src="imagenes/javascript.png"  alt="javascript" title="javascript">
-                            <img rel="img" id="imagen_web" class="imagen_web" src="imagenes/logo.png"  alt="imagen" title="imagen_web">
+                            <img id="html" class="html" src="imagenes/html.png"  alt="html" title="html">
+                            <img id="laravel" class="laravel" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                            <img id="css" class="css" src="imagenes/css.png"  alt="css" title="css">
+                            <img id="javascript" class="javascript" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                            <img id="imagen_web" class="imagen_web" src="imagenes/logo.png"  alt="imagen_web" title="imagen_web">
                         </div>
                     </div>
                     <div id="base" >
                         <div>
                             <!-- Animacion con "animateMotion", haciendo que un elemento siga una determinada ruta -->
-                            <svg viewBox="0 0 100 100" id="svg">
+                            <svg viewBox="0 0 100 100" id="svg" role="img" aria-label="Animación de habilidades">
                                 <path  d="M 25, 50a 25,25 0 1,1 50,0a 25,25 0 1,1 -50,0" style="stroke:white; stroke-width:3; fill:none;"></path>
                                 <!-- DibujA el texto -->
                                 <text id="nombre" x=0 y=0>◉
@@ -101,76 +104,77 @@
 
             <!-- Subzona 2 -->
             <section id="habilidades">
-                <h2>CONTENEDOR ZONA 2</h2>
-                <h3>SKILLS<h3>
+                <h2>SKILLS</h2>
                 <div id="habilidades_iconos">
                     <div>
-                        <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
-                        <img rel="icon" class="icono" src="imagenes/php.png"  alt="php" title="php">
-                        <img rel="icon" class="icono" src="imagenes/mysql.png"  alt="mysql" title="mysql">
+                        <img class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                        <img class="icono" src="imagenes/api_rest.png"  alt="api_rest" title="api_rest">
+                        <img class="icono" src="imagenes/php.png"  alt="php" title="php">
+                        <img class="icono" src="imagenes/mysql.png"  alt="mysql" title="mysql">
                     </div>
                     <div>
-                        <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
-                        <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
-                        <img rel="icon" class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
-                        <img rel="icon" class="icono" src="imagenes/bootstrap.png" alt="bootstrap" title="bootstrap">
-                        <img rel="icon" class="icono" src="imagenes/jquery.png"  alt="jquery" title="jquery">
+                        <img class="icono" src="imagenes/html.png"  alt="html" title="html">
+                        <img class="icono" src="imagenes/css.png"  alt="css" title="css">
+                        <img class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                        <img class="icono" src="imagenes/bootstrap.png" alt="bootstrap" title="bootstrap">
+                        <img class="icono" src="imagenes/jquery.png"  alt="jquery" title="jquery">
                     </div>
                     <div>
-                        <img rel="icon" class="icono" src="imagenes/git.png"  alt="imagen" title="git">
-                        <img rel="icon" class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
-                        <img rel="icon" class="icono" src="imagenes/photoshop.png"  alt="photoshop" title="photoshop">
+                        <img class="icono" src="imagenes/git.png"  alt="git" title="git">
+                        <img class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
+                        <img class="icono" src="imagenes/photoshop.png"  alt="photoshop" title="photoshop">
                     </div>
                 </div>
             </section>
 
             <!-- Subzona 3 -->
             <section id="proyectos">
-                <h2>CONTENEDOR ZONA 3</h2>
-                <h3>PROJECTS</h3>
+                <h2>PROYECTS</h2>
 
                 <div class="div_proyectos">
                     <article>
-                        <a href="https://mileventos.desarrollosjuanerre.com/" tabindex="0">https://www.mileventos.desarrollosjuanerre.com</a>
+                        <a href="https://mileventos.desarrollosjuanerre.com/">https://www.mileventos.desarrollosjuanerre.com</a>
                         <p>Project developed with LARAVEL for event management and ticket booking.</p>
-                        <h5>TECHNOLOGIES</h5>
+                        <h4>TECHNOLOGIES</h4>
                         <div class="div_tecnologias">
-                            <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
-                            <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
-                            <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
-                            <img rel="icon" class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
+                            <img class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                            <img class="icono" src="imagenes/html.png"  alt="html" title="html">
+                            <img class="icono" src="imagenes/css.png"  alt="css" title="css">
+                            <img class="icono" src="imagenes/javascript.png"  alt="javascript" title="javascript">
                         </div>
                     </article>
-                    <a class="link_proyecto" href="https://mileventos.desarrollosjuanerre.com/" tabindex="0"><img class="proyectos_img" rel="img" id="mileventos" src="imagenes/mileventos.png"  alt="mileventos"></a>
+                    <a class="link_proyecto" href="https://mileventos.desarrollosjuanerre.com/"><img class="proyectos_img" id="mileventos" src="imagenes/mileventos.webp"  alt="mileventos" loading="lazy"></a>
                 </div>
 
                 <div class="div_proyectos">
                     <article>
-                        <a href="https://cordobita.es/" tabindex="0">https://www.cordobita.es</a>
+                        <a href="https://cordobita.es/">https://www.cordobita.es</a>
                         <p>Project developed with LARAVEL and currently active, to offer information related to leisure activities in the city of Cordoba.</p>
-                        <h5>TECHNOLOGIES</h5>
+                        <h4>TECHNOLOGIES</h4>
                         <div class="div_tecnologias">
-                            <img rel="icon" class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
-                            <img rel="icon" class="icono" src="imagenes/html.png"  alt="html" title="html">
-                            <img rel="icon" class="icono" src="imagenes/css.png"  alt="css" title="css">
+                            <img class="icono" src="imagenes/laravel.png"  alt="laravel" title="laravel">
+                            <img class="icono" src="imagenes/html.png"  alt="html" title="html">
+                            <img class="icono" src="imagenes/css.png"  alt="css" title="css">
                         </div>
                     </article>
-                    <a class="link_proyecto" href="https://cordobita.es/" tabindex="0"><img class="proyectos_img" rel="img" id="cordobita" src="imagenes/cordobita.png"  alt="cordobita"></a>
+                    <a class="link_proyecto" href="https://cordobita.es/"><img class="proyectos_img" id="cordobita" src="imagenes/cordobita.webp" alt="cordobita" loading="lazy"></a>
                 </div>
 
                 <div class="div_proyectos">
                     <article>
-                        <a href="https://montaya.desarrollosjuanerre.com" tabindex="0">https://montaya.desarrollosjuanerre.com</a>
+                        <a href="https://montaya.desarrollosjuanerre.com">https://montaya.desarrollosjuanerre.com</a>
                         <p>Project developed with WORDPRESS, to offer information related to adventure activities.</p>
-                        <h5>TECHNOLOGIES</h5>
+                        <h4>TECHNOLOGIES</h4>
                         <div class="div_tecnologias">
-                        <img rel="icon" class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
+                        <img class="icono" src="imagenes/wordpress.png"  alt="wordpress" title="wordpress">
                         </div>
                     </article>
-                    <a class="link_proyecto" href="https://montaya.desarrollosjuanerre.com" tabindex="0"><img class="proyectos_img" rel="img" id="web_montaya" src="imagenes/montaya.jpg"  alt="montaya"></a>
+                    <a class="link_proyecto" href="https://montaya.desarrollosjuanerre.com"><img class="proyectos_img" id="web_montaya" src="imagenes/montaya.webp"  alt="montaya" loading="lazy"></a>
                 </div>
 
             </section>
+
+        </main>
 
         <!-- Zona de pie de página -->
         <footer>

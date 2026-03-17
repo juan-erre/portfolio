@@ -15,29 +15,16 @@
     --colorG: #EEEEEE;
 }
 
-/* Se incluyen en las dimensiones de los elementos los rellenos y los bordes, pero no los margenes */ 
-* { box-sizing: border-box;}
-
-h2{
-    display: none;
+/* Estilos generales para elementos de la página */
+* {
+    /* Hace que se incluyan en las dimensiones de los elementos los rellenos y los bordes, pero no los margenes */
+    box-sizing: border-box;
 }
 
-a{
- color: var(--colorA);
-}
+html{ 
+    margin: 0;
+    padding: 0;
 
-p{
-    font-family: "fuente_online";
-    font-size: 1.1rem;
-}
-
-.logo{
-    width: 50%;
-    margin: 1rem;
-}
-
-.icono_nav{
-    width: 15%;
 }
 
 body{
@@ -58,10 +45,31 @@ body{
     max-width: 1200px;
     min-width: 400px;
     margin: 0 auto;
-
 }
 
-/* Área de Cabecera */   
+/* Tecnica para ocultar un elemento pero mantener SEO */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+a{
+ color: var(--colorA);
+}
+
+p{
+    font-family: "fuente_online", serif;
+    font-size: 1.1rem;
+}
+
+/* Área de Cabecera ------------------ */   
 header{
     grid-area:header;
     display: flex;
@@ -69,13 +77,19 @@ header{
     justify-content: left;
 }
 
-/* Área de navegación*/
+/* Área de navegación --------------- */
 nav{
     grid-area:nav;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.div_navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 9%;
 }
 
 #menu_principal{
@@ -83,60 +97,46 @@ nav{
     background-color: var(--colorD);
     border-radius: 15px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
     width: 80%;
     height: 70%;
 }
 
-#menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
 #menu_principal a {
-/*    border: 1px solid red;    */ 
     font-family: "fuente_online", serif;
     text-decoration: none;
     font-weight: bolder;
     font-size: 1.2rem;
- }
+}
 
 #menu_principal a:hover {
     color: var(--colorF);
 }
 
-#menu_principal p {
-    color: var(--colorA);
-    margin-right: 3px;
+#logo{
+    width: 50%;
+    margin: 1rem;
 }
 
-.lateral {
+#menu {
     display: flex;
-    flex-direction: column;
-    flex-wrap:nowrap;
-    justify-content: center;
-    width: 9%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .icono_idiomas{
-    width: 1.6vw;
+    width: 2.2vw;
     margin: 0.3vw;
 }
 
-/* Subzona de contenido */
-#contenedor_zona_1{
+/* Contenido */
+/* Subzona de contenido 1 ------------------- */
+#datos_personales{
     grid-area:zona_1;
     background: url("../imagenes/fondo_1.png") top center/100% 100% no-repeat;
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: center;
 }
@@ -144,7 +144,6 @@ nav{
 #lateral_izquierdo {
     display: flex;
     flex-direction: column;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: center;
     width: 25%;
@@ -153,13 +152,11 @@ nav{
 
 #lateral_izquierdo p{
     width: 75%;
-    font-size: 25px;
+    font-size: 1.6rem;
 }
 
 #div_redes {
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: space-evenly;
     width: 75%;
@@ -168,32 +165,19 @@ nav{
 }
 
 /* Iconos de redes sociales con transicion */    
-#icono_linkedin {
+.icono_redes {
     border: var(--colorA) 0.5vw solid;
     border-radius: 50%;
     width: 5vw;
 }
         
-#icono_linkedin:hover {
+.icono_redes:hover {
     transform: rotate(360deg);
     border-color: var(--colorD);
     /* La transición se aplica sobre todas las propiedad definidas y durará 2 segundo.*/
-    transition: all, 2s;
+    transition: all 2s;
 }
  
-#icono_github {
-    border: var(--colorA) 0.5vw solid;
-    border-radius: 50%;
-    width: 5vw;
-}
-         
-#icono_github:hover {
-    transform: rotate(360deg);
-    border-color: var(--colorD);
-    /* La transición se aplica sobre todas las propiedad definidas y durará 2 segundo.*/
-    transition: all, 2s;
-}
-
 #lateral_derecho{
     width: 25%;
     height: 90%;
@@ -204,7 +188,6 @@ nav{
     background: url("../imagenes/monitor.png") top center/100% 100% no-repeat;
     display: flex;
     flex-direction: column;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
@@ -213,8 +196,6 @@ nav{
 
 #marco {
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -223,8 +204,6 @@ nav{
 
 #pantalla {
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: center;
     width: 95%;
@@ -233,8 +212,6 @@ nav{
 
 #base{
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
@@ -403,7 +380,7 @@ nav{
     from   {
         }
     to {
-        width: 30%;
+        min-width: 35%;
         height: 40%;
         opacity: 1;
     }
@@ -414,7 +391,7 @@ nav{
     height: 4vw;
 }
 
-/* Subzona de contenido */
+/* Subzona de contenido 2 -------------------- */
 #habilidades {
     grid-area:zona_2;
     background-color: var(--colorA);
@@ -436,13 +413,11 @@ nav{
     width: 4vw;
 }
 
-/* Subzona de contenido */
-
+/* Subzona de contenido 3 ------------------ */
 #proyectos{
     grid-area:zona_3;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-evenly;
     background-color: var(--colorA); 
@@ -450,8 +425,6 @@ nav{
 
 .div_proyectos{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around; 
     width: 90%;
@@ -462,7 +435,6 @@ nav{
 #proyectos div article{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     align-items: start;
     justify-content: center;
     width: 100%;
@@ -471,6 +443,7 @@ nav{
 
 .link_proyecto{
     width: 100%;
+    min-width: 38%;
 }
 
 #proyectos a{
@@ -485,12 +458,10 @@ nav{
     margin: 1%;
 }
 
-/* Pie de página */
+/* Pie de página -------------------------- */
 footer{
     grid-area:footer;
     display: flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
@@ -500,58 +471,22 @@ footer{
     margin-bottom: 2rem;
 }
 
-#solucion {
-    width: 30vw;
-}
-
-#juego {
-    grid-area:footer;
-    display: flex;
-    flex-direction: column;
-    flex-wrap:nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.imagen_pequeña{
-    border: black solid 2px;
-    width: 4vw;
-}
-
-.imagen_grande{
-    border: black solid 2px;
-    width: 7vw;
-}
-
-#resultados {
-    text-align: center;
-    display: none;
-} 
-
-/* Adaptación a la resolución de la pantalla  */ 
-@media screen and (max-width:1200px) {
-   
-
-        
-}
-
-@media screen and (max-width:992px) {
-   
-
-}
-
-@media screen and (max-width:768px) {
+/* Adaptación a la resolución de la pantalla -------------  */ 
+@media screen and (max-width:800px) {
    
     .icono_idiomas {
+        width: 40%;
+    }
+
+    #logo {
         width: 30%;
     }
-    .logo {
-        width: 30%;
+
+    .icono_redes{
+        width: 8vw;
     }
-    header p{
-        font-size: 1.5vw;
-    }
-    #contenedor_zona_1{
+
+    #datos_personales{
         flex-direction: column;
     }
     
@@ -559,19 +494,23 @@ footer{
         width: 100%;
         height: 20%;
     }
+
     #lateral_izquierdo p{
         text-align: center;
         width: 100%;
-        font-size: 17px;
+        font-size: 1.2rem;
     }
+
     #div_redes {
         width: 50%;
         height: 40%;
     }
+
     #monitor{
         width: 70%;
         height: 400px;
     }
+
     #lateral_derecho {
         display: none;
     }
@@ -579,12 +518,14 @@ footer{
     .icono {
         width: 6vw;
     }
+
     .div_proyectos{
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 80%;
     }
+
     #proyectos div article{
         width: 85%;
     }
@@ -592,31 +533,18 @@ footer{
     footer{
         flex-direction: column;
     }
-    #solucion {
-        width: 40vw;
-    }
-       
-    .imagen_pequeña{
-        width: 8vw;
-    }
-    
-    .imagen_grande{
-        width: 12vw;
-    }
-    #juego h3 {
-        font-size: 2.5vw;
-    }
-    #resultados {
-        display: block;
-    }
 }
 
-@media screen and (max-width:576px) {
-    
-    header h3{
-        font-size: 3vw;
+@media screen and (max-width:600px) {
+        
+    h2{
+        font-size: 1.3rem;
     }
-    
+
+    h3{
+        font-size: 0.8rem;
+    }
+
     #menu_principal a {
         font-size: 1rem;
     }
@@ -624,45 +552,54 @@ footer{
     .icono_idiomas {
         width: 40%;
     }
+
     .logo {
         width: 45%;
     }
+
     #icono_linkedin,  #icono_github {
         width: 7vw;
     }
+
     #monitor{
         height: 300px;
     }
+
     .icono {
         width: 8vw;
     }
-}
 
-@media screen and (max-width:440px) {
-   
-    #menu_principal p {
-        font-size: 12px;
-    }
-
-    #menu_principal a {
-        font-size: 0.8rem;
-    }
-    .icono_idiomas {
-        width: 50%;
-    }
-    .logo {
-        width: 60%;
-    }
-    #lateral_izquierdo p{
-        font-size: 13px;
-    }
-    #monitor{
-        height: 200px;
-    }
     #proyectos div article a{
         font-size: 3.7vw;
     }
-    
+}
+
+@media screen and (max-width:450px) {
+   
+    #menu_principal a {
+        font-size: 0.8rem;
+    }
+
+    .icono_idiomas {
+        width: 50%;
+    }
+
+    .logo {
+        width: 60%;
+    }
+
+    #lateral_izquierdo p{
+        font-size: 1rem;
+    }
+
+    #monitor{
+        height: 200px;
+    }
+
+    #proyectos div article a{
+        font-size: 4.0vw;
+    }
+
     .icono {
         width: 10vw;
     }
