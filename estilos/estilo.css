@@ -10,7 +10,7 @@
     --colorB: #979797;
     --colorC: #000000;
     --colorD: #0196A7;
-    --colorE: #2B2A29;
+    --colorE: #3b3b3b;
     --colorF: #C5C6C6;
     --colorG: #EEEEEE;
 }
@@ -473,14 +473,22 @@ footer{
 }
 
 footer a{
-    color: var(--colorB);
+    color: var(--colorE);
+    text-decoration: none;
+    margin: 0.2rem;
 }
 
 #creditos{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+#creditos div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 1rem;
 }
 
 /* Adaptación a la resolución de la pantalla -------------  */ 
@@ -541,6 +549,10 @@ footer a{
     #proyectos div article{
         width: 85%;
     }
+
+    #creditos{
+        flex-direction: column;
+}
 }
 
 @media screen and (max-width:600px) {
